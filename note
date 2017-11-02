@@ -1,0 +1,6 @@
+<h1> ..-. .. -.. .- -. | .- -... -... .- ... --- ...- .- </h1>
+<h1><i class="fa fa-chevron-left" aria-hidden="true"></i><span>/</span><i class="fa fa-chevron-right" aria-hidden="true"></i></h1>
+background: rgba(34,58,94,.8); //Navy Peony
+background: rgba(149,82,81,.9); //Marsala
+background: rgba(128,0,0,.8); //Niagara
+background: rgba(179,194,191,.8); 

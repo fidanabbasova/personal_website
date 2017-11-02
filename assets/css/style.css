@@ -1,0 +1,227 @@
+@font-face {
+  font-family: Lato;
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
+body {
+  font-family: Lato, sans-serif; }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  body #loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid rgba(225, 225, 225, 0.8);
+    border-radius: 50%;
+    border-right: 16px solid #1c1c29;
+    border-left: 16px solid orange;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; }
+  body #nav-button {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100; }
+    body #nav-button button {
+      position: relative;
+      right: 200px;
+      background: transparent;
+      border: none;
+      opacity: 0; }
+      body #nav-button button .icon-span {
+        display: block;
+        width: 45px;
+        height: 5px;
+        background: #FFF;
+        margin: 10px;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        -ms-transition-property: all;
+        -ms-transition-duration: 0.3s;
+        -ms-transition-timing-function: ease-out; }
+      body #nav-button button .middle-bar {
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-out;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.1s;
+        -webkit-transition-timing-function: ease-out;
+        -ms-transition-property: all;
+        -ms-transition-duration: 0.1s;
+        -ms-transition-timing-function: ease-out; }
+      body #nav-button button:focus {
+        outline: none; }
+      body #nav-button button:hover {
+        cursor: pointer; }
+    body #nav-button .active .icon-span {
+      width: 55px;
+      margin-right: 0; }
+    body #nav-button .active .top-bar {
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -ms-transform-origin: 10% 10%;
+      -webkit-transform-origin: 10% 10%;
+      transform-origin: 10% 10%; }
+    body #nav-button .active .middle-bar {
+      opacity: 0; }
+    body #nav-button .active .bottom-bar {
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -ms-transform-origin: 10% 90%;
+      -webkit-transform-origin: 10% 90%;
+      transform-origin: 10% 90%; }
+  body #nav-lightbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    z-index: 95; }
+    body #nav-lightbox ul {
+      margin-right: 95px; }
+      body #nav-lightbox ul li {
+        margin: 25px;
+        list-style-type: none;
+        float: left; }
+        body #nav-lightbox ul li a {
+          font-size: 2em;
+          text-transform: uppercase;
+          letter-spacing: -40px;
+          text-decoration: none;
+          color: rgba(225, 225, 225, 0.6); }
+        body #nav-lightbox ul li .active {
+          color: #e1e1e1 !important; }
+    @media screen and (max-width: 961px) {
+      body #nav-lightbox ul {
+        margin-right: 0;
+        padding: 0; }
+        body #nav-lightbox ul li {
+          float: none; } }
+    @media screen and (max-width: 960px) and (min-width: 768px) {
+      body #nav-lightbox ul {
+        margin: 200px 0 0; } }
+    @media screen and (max-width: 767px) and (min-width: 576px) {
+      body #nav-lightbox ul {
+        margin-top: 150px; } }
+    @media screen and (max-width: 575px) {
+      body #nav-lightbox ul li {
+        margin: 15px; }
+        body #nav-lightbox ul li a {
+          font-size: 1.5em; } }
+    @media screen and (max-width: 575px) and (min-width: 360px) {
+      body #nav-lightbox ul {
+        margin-top: 150px; } }
+    @media screen and (max-width: 360px) {
+      body #nav-lightbox ul {
+        margin-top: 100px; } }
+  body #nav-circle {
+    display: none;
+    position: fixed;
+    z-index: 100; }
+    body #nav-circle ul {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      margin: 0; }
+      body #nav-circle ul li {
+        list-style-type: none; }
+        body #nav-circle ul li a {
+          margin: 3px;
+          display: inline-block;
+          padding: 5px;
+          border: 2px solid #FFF;
+          border-radius: 50%; }
+        body #nav-circle ul li:first-child a {
+          margin-top: 0; }
+        body #nav-circle ul li .active {
+          border: none;
+          padding: 7px;
+          background: #FFF; }
+    @media screen and (max-width: 575px) {
+      body #nav-circle {
+        visibility: hidden; } }
+  body header {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; }
+    body header video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto; }
+  body #container {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0; }
+    body #container .sections {
+      display: block;
+      padding: 0;
+      position: absolute;
+      z-index: 50;
+      width: 100%;
+      height: 100vh; }
+    body #container #home {
+      text-align: center;
+      background: rgba(28, 28, 41, 0.85); }
+      body #container #home h1 {
+        margin: 0;
+        line-height: 100vh;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 48px; }
+        body #container #home h1 .orange {
+          color: orange; }
+        body #container #home h1 .hidden {
+          display: none; }
+        @media screen and (min-width: 601px) and (max-width: 700px) {
+          body #container #home h1 {
+            font-size: 40px; } }
+        @media screen and (min-width: 414px) and (max-width: 600px) {
+          body #container #home h1 {
+            font-size: 36px; } }
+        @media screen and (max-width: 413px) {
+          body #container #home h1 {
+            font-size: 30px; } }
+    body #container #about {
+      top: 100vh;
+      background: orange; }
+    body #container #resume {
+      top: 200vh;
+      background: yellow; }
+    body #container #skills {
+      top: 300vh;
+      background: green; }
+    body #container #portfolio {
+      top: 400vh;
+      background: blue; }
+    body #container #blog {
+      top: 500vh;
+      background: navy; }
+    body #container #contact {
+      top: 600vh;
+      background: purple; }
+
+/*# sourceMappingURL=style.css.map */
