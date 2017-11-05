@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
 @font-face {
   font-family: Lato;
   src: url("../../fonts/Lato/Lato-Regular.ttf"); }
@@ -21,10 +23,9 @@ body {
     width: 150px;
     height: 150px;
     margin: -75px 0 0 -75px;
-    border: 16px solid rgba(225, 225, 225, 0.8);
     border-radius: 50%;
-    border-right: 16px solid #1c1c29;
-    border-left: 16px solid orange;
+    border-left: 16px solid #1c1c29;
+    border-right: 16px solid #ff9933;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite;
@@ -94,15 +95,14 @@ body {
     position: fixed;
     width: 100%;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(28, 28, 41, 0.85);
     text-align: center;
     z-index: 95; }
     body #nav-lightbox ul {
       margin-right: 95px; }
       body #nav-lightbox ul li {
         margin: 25px;
-        list-style-type: none;
-        float: left; }
+        list-style-type: none; }
         body #nav-lightbox ul li a {
           font-size: 2em;
           text-transform: uppercase;
@@ -144,6 +144,7 @@ body {
       top: 0;
       margin: 0; }
       body #nav-circle ul li {
+        position: relative;
         list-style-type: none; }
         body #nav-circle ul li a {
           margin: 3px;
@@ -151,12 +152,34 @@ body {
           padding: 5px;
           border: 2px solid #FFF;
           border-radius: 50%; }
+        body #nav-circle ul li div {
+          display: none;
+          position: absolute;
+          top: -15px;
+          left: 35px;
+          background: #1c1c3c;
+          color: #FFF;
+          padding: 15px;
+          border-radius: 40px; }
+          body #nav-circle ul li div:before {
+            content: " ";
+            border-style: solid;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #1c1c3c transparent transparent;
+            position: absolute;
+            left: -13px; }
         body #nav-circle ul li:first-child a {
           margin-top: 0; }
         body #nav-circle ul li .active {
           border: none;
           padding: 7px;
           background: #FFF; }
+        body #nav-circle ul li:hover a {
+          border: none;
+          padding: 7px;
+          background: #FFF; }
+        body #nav-circle ul li:hover div {
+          display: block; }
     @media screen and (max-width: 575px) {
       body #nav-circle {
         visibility: hidden; } }
@@ -183,7 +206,20 @@ body {
       position: absolute;
       z-index: 50;
       width: 100%;
-      height: 100vh; }
+      min-height: 100vh; }
+      body #container .sections .panel {
+        width: 50%;
+        min-height: 100vh;
+        float: left; }
+      body #container .sections .navPanel {
+        text-align: center; }
+        body #container .sections .navPanel h2 {
+          margin: 0;
+          line-height: 100vh;
+          font-size: 60px;
+          font-weight: lighter;
+          color: #FFF;
+          font-family: 'Raleway', sans-serif; }
     body #container #home {
       text-align: center;
       background: rgba(28, 28, 41, 0.85); }
@@ -191,9 +227,11 @@ body {
         margin: 0;
         line-height: 100vh;
         color: rgba(255, 255, 255, 0.8);
-        font-size: 48px; }
+        font-size: 56px;
+        font-weight: lighter;
+        font-family: "Open Sans", sans-serif; }
         body #container #home h1 .orange {
-          color: orange; }
+          color: #ff9933; }
         body #container #home h1 .hidden {
           display: none; }
         @media screen and (min-width: 601px) and (max-width: 700px) {
@@ -207,11 +245,36 @@ body {
             font-size: 30px; } }
     body #container #about {
       top: 100vh;
-      background: orange; }
-    body #container #resume {
-      top: 200vh;
-      background: yellow; }
+      color: #555; }
+      body #container #about .navPanel {
+        background: #ff9933; }
+      body #container #about .sidePanel {
+        background: #FFF;
+        text-align: center; }
+        body #container #about .sidePanel img {
+          margin: 30px;
+          width: 40%;
+          height: auto;
+          border-radius: 50%;
+          box-shadow: 0 0 10px #333; }
+        body #container #about .sidePanel p {
+          line-height: 30px;
+          font-size: 24px;
+          margin: 0 100px;
+          text-align: right;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: lighter; }
+          body #container #about .sidePanel p strong {
+            color: #1c1c3c; }
+          body #container #about .sidePanel p i {
+            color: #1c1c3c; }
     body #container #skills {
+      top: 200vh; }
+      body #container #skills .navPanel {
+        background: #1c1c29; }
+      body #container #skills .sidePanel {
+        background: #FFF; }
+    body #container #resume {
       top: 300vh;
       background: green; }
     body #container #portfolio {

@@ -61,6 +61,7 @@ $(document).ready( function() {
 	$('#nav-button button').click( function() {
 		$(this).toggleClass('active');
 		$('#nav-lightbox').fadeToggle();
+		$('#container').fadeToggle();
 		if ($('#nav-button button').hasClass('active')) {
 			console.log('active');
 			$('#nav-lightbox a').animate({letterSpacing: '-1px' });

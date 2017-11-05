@@ -1,5 +1,11 @@
 // @import "../vendor/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 
+$orange: rgb(255,153,51);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+
 @mixin transition($p, $d, $t) {
 	transition-property: $p;
 	transition-duration: $d;	
@@ -43,10 +49,9 @@ body {
 		width: 150px;
 		height: 150px;
 		margin: -75px 0 0 -75px;
-		border: 16px solid rgba(225,225,225,.8);
 		border-radius: 50%;
-		border-right: 16px solid #1c1c29;
-		border-left: 16px solid orange;
+		border-left: 16px solid #1c1c29;
+		border-right: 16px solid $orange;
 		width: 120px;
 		height: 120px;
 		-webkit-animation: spin 2s linear infinite;
@@ -105,7 +110,7 @@ body {
 		position: fixed;
 		width: 100%;
 		min-height: 100vh;
-		background: rgba(0,0,0,.6);
+		background: rgba(28,28,41,.85);
 		text-align: center;
 		z-index: 95;
 		ul {
@@ -113,7 +118,7 @@ body {
 			li {
 				margin: 25px;
 				list-style-type: none;
-				float: left;
+				// float: left;
 				a {
 					font-size: 2em;
 					text-transform: uppercase;
@@ -177,6 +182,7 @@ body {
 			top: 0;
 			margin: 0;
 			li {
+				position: relative;
 				list-style-type: none;
 				a {
 					margin: 3px;
@@ -184,6 +190,25 @@ body {
 					padding: 5px;
 					border: 2px solid #FFF;
 					border-radius: 50%;
+					
+				}
+				div {
+					display: none;
+					position: absolute;
+					top: -15px;
+					left: 35px;
+					background: rgb(28,28,60);
+					color: #FFF;
+					padding: 15px;
+					border-radius: 40px;
+					&:before {
+						content:" ";
+					    border-style: solid;
+					    border-width: 10px 15px 10px 0;
+					    border-color: transparent  rgb(28,28,60) transparent transparent;
+					    position: absolute;
+					    left: -13px;
+					}
 				}
 				&:first-child {
 					a {
@@ -194,6 +219,16 @@ body {
 					border: none;
 					padding: 7px;
 					background: #FFF;
+				}
+				&:hover {
+					a {
+						border: none;
+						padding: 7px;
+						background: #FFF;
+					}
+					div {
+						display: block;
+					}
 				}
 			}
 		}
@@ -227,7 +262,24 @@ body {
 			position: absolute;
 			z-index: 50;
 			width: 100%;
-			height: 100vh;
+			min-height: 100vh;
+			.panel {
+				width: 50%;
+				min-height: 100vh;
+				float: left;
+			}
+			.navPanel {
+				text-align: center; 
+				h2 {
+					margin: 0;
+					line-height: 100vh;
+					font-size: 60px;
+					font-weight: lighter;
+					color: #FFF;
+					font-family: 'Raleway', sans-serif;
+				}
+
+			}
 		}
 		#home{
 			text-align: center;
@@ -236,9 +288,11 @@ body {
 				margin: 0;
 				line-height: 100vh;
 				color: rgba(255,255,255,.8);
-				font-size: 48px;
+				font-size: 56px;
+				font-weight: lighter;
+				font-family: "Open Sans", sans-serif;
 				.orange {
-					color: orange;
+					color: $orange;
 				}
 				.hidden {
 					display: none;
@@ -256,13 +310,49 @@ body {
 		}
 		#about {
 			top: 100vh;
-			background: orange;
-		}
-		#resume {
-			top: 200vh;
-			background: yellow;
+			color: #555;
+			.navPanel {
+				background: $orange;
+			}
+			.sidePanel {
+				background: #FFF;
+				text-align: center;
+				img {
+					margin: 30px;
+					width: 40%;
+					height: auto;
+					border-radius: 50%;
+					// border: 10px dashed $orange;
+					box-shadow: 0 0 10px #333;
+				}
+				p {
+					line-height: 30px;
+					font-size: 24px;
+					margin: 0 100px;
+					text-align: right;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: lighter;
+					strong {
+						color:  rgb(28,28,60);
+
+					}
+					i {
+						color: rgb(28,28,60);
+
+					}
+				}
+			}			
 		}
 		#skills {
+			top: 200vh;
+			.navPanel {
+				background: rgb(28,28,41);
+			}
+			.sidePanel {
+				background: #FFF;
+			}
+		}
+		#resume {
 			top: 300vh;
 			background: green;
 		}

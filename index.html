@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Fidan Abbasova</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="imgs/icon.png">
+	<link rel="apple-touch-icon" href="imgs/logo.png">
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,8 +24,8 @@
 	<ul>
 		<li><a href="#home" class="active"><i class="fa fa-home"></i></a></li>
 		<li><a href="#about">About</a></li>
-		<li><a href="#resume">Resume</a></li>
 		<li><a href="#skills">Skills</a></li>
+		<li><a href="#resume">Resume</a></li>
 		<li><a href="#portfolio">Portfolio</a></li>
 		<li><a href="#blog">Blog</a></li>
 		<li><a href="#contact">Contact</a></li>
@@ -31,13 +33,13 @@
 </nav>
 <nav id="nav-circle">
 	<ul>
-		<li><a href="#home" class="active"></a></li>
-		<li><a href="#about"></a></li>
-		<li><a href="#resume"></a></li>
-		<li><a href="#skills"></a></li>
-		<li><a href="#portfolio"></a></li>
-		<li><a href="#blog"></a></li>
-		<li><a href="#contact"></a></li>
+		<li><a href="#home" class="active"></a><div>Home</div></li>
+		<li><a href="#about"></a><div>About</div></li>		
+		<li><a href="#skills"></a><div>Skills</div></li>
+		<li><a href="#resume"></a><div>Resume</div></li>
+		<li><a href="#portfolio"></a><div>Portfolio</div></li>
+		<li><a href="#blog"></a><div>Blog</div></li>
+		<li><a href="#contact"></a><div>Contact</div></li>
 	</ul>
 </nav>
 <header>
@@ -47,15 +49,29 @@
 </header>
 <section id="container">
 	<section id="home" class="sections">
-		<h1><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="hidden"><span class="orange">Fidan</span>Abbasova</span><span class="orange">/</span><i class="fa fa-chevron-right" aria-hidden="true"></i></h1>
+		<h1><i class="fa fa-angle-left" aria-hidden="true"></i><span class="hidden"><span class="orange">Fidan</span> Abbasova</span><span class="orange">/</span><i class="fa fa-angle-right" aria-hidden="true"></i></h1>
 		<audio loop> <!-- autoplay -->
 			<source src="audio/morse.wav" type="audio/wav">
 		</audio>
 	</section>
 	<section id="about" class="sections">
+		<div class="navPanel panel">
+			<h2><i class="fa fa-user-circle" aria-hidden="true"></i></i><!-- <i class="fa fa-address-card" aria-hidden="true"></i> -->About me </h2>
+		</div>
+		<div class="sidePanel panel">
+			<img src="imgs/profile.jpg">
+			<p><i class="fa fa-quote-left" aria-hidden="true"></i> I am a front-end <strong>web developer</strong>. I am a junior programmer with good knowledge of <strong>front-end</strong> techniques. I love <strong>structure</strong> and <strong>order</strong> and I also stand for <strong>quality</strong>. I love spending time on <strong>fixing</strong> little details and <strong>optimizing</strong> websites. Also I like working in a <strong>team</strong>, you'll learn faster and much more. <br><strong>I enjoy working</strong>.<i class="fa fa-quote-right" aria-hidden="true"></i></p>
+		</div>
+	</section>
+	<section id="skills" class="sections">
+		<div class="sidePanel panel">
+			
+		</div>
+		<div class="navPanel panel">
+			<h2><i class="fa fa-align-left" aria-hidden="true"></i> My Skills</h2>
+		</div>
 	</section>
 	<section id="resume" class="sections"></section>
-	<section id="skills" class="sections"></section>
 	<section id="portfolio" class="sections"></section>
 	<section id="blog" class="sections"></section>
 	<section id="contact" class="sections"></section>
