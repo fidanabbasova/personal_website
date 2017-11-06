@@ -211,9 +211,9 @@ body {
         width: 50%;
         min-height: 100vh;
         float: left; }
-      body #container .sections .navPanel {
+      body #container .sections .titlePanel {
         text-align: center; }
-        body #container .sections .navPanel h2 {
+        body #container .sections .titlePanel h2 {
           margin: 0;
           line-height: 100vh;
           font-size: 60px;
@@ -246,37 +246,82 @@ body {
     body #container #about {
       top: 100vh;
       color: #555; }
-      body #container #about .navPanel {
+      body #container #about .titlePanel {
         background: #ff9933; }
-      body #container #about .sidePanel {
+      body #container #about .contentPanel {
         background: #FFF;
         text-align: center; }
-        body #container #about .sidePanel img {
+        body #container #about .contentPanel img {
           margin: 30px;
           width: 40%;
           height: auto;
           border-radius: 50%;
           box-shadow: 0 0 10px #333; }
-        body #container #about .sidePanel p {
+        body #container #about .contentPanel p {
           line-height: 30px;
           font-size: 24px;
           margin: 0 100px;
           text-align: right;
           font-family: 'Open Sans', sans-serif;
           font-weight: lighter; }
-          body #container #about .sidePanel p strong {
+          body #container #about .contentPanel p strong {
             color: #1c1c3c; }
-          body #container #about .sidePanel p i {
+          body #container #about .contentPanel p i {
             color: #1c1c3c; }
     body #container #skills {
+      position: relative;
       top: 200vh; }
-      body #container #skills .navPanel {
+      body #container #skills .titlePanel {
         background: #1c1c29; }
-      body #container #skills .sidePanel {
+      body #container #skills .contentPanel {
+        position: relative;
         background: #FFF; }
+        body #container #skills .contentPanel table {
+          position: absolute;
+          width: 100%;
+          color: #333; }
+          body #container #skills .contentPanel table tr {
+            height: 40px; }
+            body #container #skills .contentPanel table tr .title {
+              width: 20%;
+              text-align: right;
+              font-weight: bold;
+              padding-right: 15px; }
+            body #container #skills .contentPanel table tr .level {
+              width: 70%; }
+              body #container #skills .contentPanel table tr .level div {
+                height: 25px;
+                background: #1c1c3c; }
+            body #container #skills .contentPanel table tr .percent {
+              width: 15%; }
+          body #container #skills .contentPanel table #html .level div {
+            width: 97%; }
+          body #container #skills .contentPanel table #css .level div {
+            width: 95%; }
+          body #container #skills .contentPanel table #sass .level div {
+            width: 94%; }
+          body #container #skills .contentPanel table #less .level div {
+            width: 82%; }
+          body #container #skills .contentPanel table #bootstrapt .level div {
+            width: 87%; }
+          body #container #skills .contentPanel table #javascript .level div {
+            width: 85%; }
+          body #container #skills .contentPanel table #jquery .level div {
+            width: 87%; }
+          body #container #skills .contentPanel table #php .level div {
+            width: 53%; }
+          body #container #skills .contentPanel table #laravel .level div {
+            width: 58%; }
+          body #container #skills .contentPanel table #c .level div {
+            width: 72%; }
+          body #container #skills .contentPanel table #cpp .level div {
+            width: 65%; }
+          body #container #skills .contentPanel table #mysql .level div {
+            width: 87%; }
+          body #container #skills .contentPanel table #git .level div {
+            width: 72%; }
     body #container #resume {
-      top: 300vh;
-      background: green; }
+      top: 300vh; }
     body #container #portfolio {
       top: 400vh;
       background: blue; }

@@ -268,7 +268,7 @@ body {
 				min-height: 100vh;
 				float: left;
 			}
-			.navPanel {
+			.titlePanel {
 				text-align: center; 
 				h2 {
 					margin: 0;
@@ -311,10 +311,10 @@ body {
 		#about {
 			top: 100vh;
 			color: #555;
-			.navPanel {
+			.titlePanel {
 				background: $orange;
 			}
-			.sidePanel {
+			.contentPanel {
 				background: #FFF;
 				text-align: center;
 				img {
@@ -344,17 +344,84 @@ body {
 			}			
 		}
 		#skills {
+			position: relative;
 			top: 200vh;
-			.navPanel {
+			.titlePanel {
 				background: rgb(28,28,41);
 			}
-			.sidePanel {
+			.contentPanel {
+				position: relative;
 				background: #FFF;
+				table {
+					position: absolute;
+					width: 100%;
+					color: #333;
+					tr {
+						height: 40px;
+						.title {
+							width: 20%;
+							text-align: right;
+							font-weight: bold;
+							padding-right: 15px;
+
+						}
+						.level {
+							width: 70%;
+							div {
+								height: 25px;
+								background: rgb(28,28,60);
+							}
+						}
+						.percent {
+							width: 15%;
+						}
+					}
+					#html .level div{
+						width: 97%;
+					}
+					#css .level div{
+						width: 95%;
+					}
+					#sass .level div{
+						width: 94%;
+					}
+					#less .level div{
+						width: 82%;
+					}
+					#bootstrapt .level div{
+						width: 87%;
+					}
+					#javascript .level div{
+						width: 85%;
+					}
+					#jquery .level div{
+						width: 87%;
+					}
+					#php .level div{
+						width: 53%;
+					}
+					#laravel .level div{
+						width: 58%;
+					}
+					#c .level div{
+						width: 72%;
+					}
+					#cpp .level div{
+						width: 65%;
+					}
+					#mysql .level div{
+						width: 87%;
+					}
+					#git .level div{
+						width: 72%;
+					}
+				}
+
 			}
 		}
 		#resume {
 			top: 300vh;
-			background: green;
+
 		}
 		#portfolio {
 			top: 400vh;

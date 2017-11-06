@@ -16,6 +16,8 @@ var viewportheight;
  }
 
 console.log(viewportheight);
+tableTop = (viewportheight - 548) / 2;
+tableTop += "px";
 
 navCircleTop = (viewportheight - 162) / 2;
 navCircleTop += "px";
@@ -55,6 +57,7 @@ function loadFunction() {
 
 
 $(document).ready( function() {
+	$('table').css('top', tableTop);
 	$('#nav-button button').animate({opacity: '1', right: '0'});
 	$('#nav-circle ul').animate({opacity: '1', top: navCircleTop});
 	$('.hidden').fadeIn("slow");
