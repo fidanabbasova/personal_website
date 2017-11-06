@@ -291,7 +291,7 @@ body {
               width: 70%; }
               body #container #skills .contentPanel table tr .level div {
                 height: 25px;
-                background: #1c1c3c; }
+                background: orange; }
             body #container #skills .contentPanel table tr .percent {
               width: 15%; }
           body #container #skills .contentPanel table #html .level div {
@@ -322,6 +322,10 @@ body {
             width: 72%; }
     body #container #resume {
       top: 300vh; }
+      body #container #resume #particles-js {
+        width: 100%;
+        height: 100vh;
+        background: rgba(28, 28, 41, 0.85); }
     body #container #portfolio {
       top: 400vh;
       background: blue; }
