@@ -102,7 +102,8 @@ body {
       margin-right: 95px; }
       body #nav-lightbox ul li {
         margin: 25px;
-        list-style-type: none; }
+        list-style-type: none;
+        float: left; }
         body #nav-lightbox ul li a {
           font-size: 2em;
           text-transform: uppercase;
@@ -291,7 +292,7 @@ body {
               width: 70%; }
               body #container #skills .contentPanel table tr .level div {
                 height: 25px;
-                background: orange; }
+                background: #ff9933; }
             body #container #skills .contentPanel table tr .percent {
               width: 15%; }
           body #container #skills .contentPanel table #html .level div {
@@ -320,12 +321,94 @@ body {
             width: 87%; }
           body #container #skills .contentPanel table #git .level div {
             width: 72%; }
-    body #container #resume {
+    body #container #particles {
       top: 300vh; }
-      body #container #resume #particles-js {
+      body #container #particles #particles-js {
         width: 100%;
         height: 100vh;
-        background: rgba(28, 28, 41, 0.85); }
+        background: linear-gradient(to right, rgba(28, 28, 41, 0.8), #1c1c29, rgba(28, 28, 41, 0.8)); }
+    body #container #resume {
+      top: 300vh; }
+      body #container #resume .sidePanel {
+        width: calc( 50% - 40px );
+        height: 100vh;
+        float: left; }
+        body #container #resume .sidePanel div p {
+          color: #FFF;
+          margin: 0;
+          line-height: 30px;
+          font-family: "Open Sans", sans-serif; }
+          body #container #resume .sidePanel div p:first-child {
+            color: #ff9933; }
+          body #container #resume .sidePanel div p:last-child {
+            font-weight: bold; }
+      body #container #resume .leftPanel {
+        text-align: right;
+        padding-right: 40px; }
+        body #container #resume .leftPanel .mb {
+          margin-top: 50px; }
+        body #container #resume .leftPanel .aca {
+          margin-top: 150px; }
+      body #container #resume .rightPanel {
+        text-align: left;
+        padding-left: 40px; }
+        body #container #resume .rightPanel .sinam {
+          margin-top: 170px; }
+        body #container #resume .rightPanel .apa {
+          margin-top: 150px; }
+      body #container #resume .centerPanel {
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        right: 50%;
+        width: 1px;
+        height: 490px;
+        background: #FFF; }
+      body #container #resume .center-circle {
+        position: absolute;
+        right: calc(50% - 15px);
+        left: calc(50% - 15px);
+        z-index: 1000;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #FFF; }
+        body #container #resume .center-circle i {
+          position: absolute;
+          color: #1c1c29;
+          top: 7px;
+          left: 7px; }
+      body #container #resume #mb-circle {
+        top: 50px; }
+      body #container #resume #sinam-circle {
+        top: 170px; }
+      body #container #resume #aca-circle {
+        top: 290px; }
+        body #container #resume #aca-circle i {
+          left: 6px; }
+      body #container #resume #apa-circle {
+        top: 410px; }
+        body #container #resume #apa-circle i {
+          left: 6px; }
+      body #container #resume button {
+        top: 555px;
+        position: absolute;
+        right: calc(50% - 100px);
+        left: calc(50% - 100px);
+        z-index: 1000;
+        width: 200px;
+        height: 60px;
+        line-height: 56px;
+        background: transparent;
+        border: 3px solid #ff9933;
+        color: #ff9933;
+        font-family: "Open Sans", sans-serif; }
+        body #container #resume button:hover {
+          cursor: pointer;
+          background: #ff9933;
+          color: #FFF; }
+        body #container #resume button:focus {
+          outline: none; }
     body #container #portfolio {
       top: 400vh;
       background: blue; }
