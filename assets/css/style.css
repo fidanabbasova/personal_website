@@ -399,7 +399,7 @@ body {
         body #container #resume button:hover {
           cursor: pointer;
           background: #ff9933;
-          color: #FFF; }
+          color: #1c1c29; }
         body #container #resume button:focus {
           outline: none; }
     body #container #portfolio {
@@ -407,5 +407,60 @@ body {
       text-align: center; }
       body #container #portfolio img {
         height: 300vh; }
+    body #container #blog {
+      top: 700vh;
+      background: red; }
+    body #container #contact {
+      top: 800vh; }
+      body #container #contact .titlePanel {
+        background: linear-gradient(to right, rgba(255, 153, 51, 0.95), rgba(28, 28, 41, 0.95)); }
+      body #container #contact .contentPanel {
+        background: rgba(28, 28, 41, 0.95);
+        text-align: center; }
+        body #container #contact .contentPanel ul {
+          list-style-type: none; }
+          body #container #contact .contentPanel ul li {
+            display: inline-block;
+            margin: 10px; }
+            body #container #contact .contentPanel ul li a i {
+              font-size: 50px;
+              color: #FFF; }
+        body #container #contact .contentPanel input {
+          width: calc(100% - 80px);
+          height: 30px;
+          border: none;
+          border-top: 4px solid #ff9933;
+          margin: 20px;
+          padding: 20px;
+          background: rgba(255, 255, 255, 0.2);
+          color: #FFF; }
+          body #container #contact .contentPanel input::-webkit-input-placeholder {
+            color: #DDD; }
+        body #container #contact .contentPanel textarea {
+          width: calc(100% - 80px);
+          border: none;
+          resize: none;
+          padding: 20px;
+          margin: 0;
+          border-top: 4px solid #ff9933;
+          margin: 20px;
+          background: rgba(255, 255, 255, 0.2);
+          color: #FFF; }
+          body #container #contact .contentPanel textarea::-webkit-input-placeholder {
+            color: #DDD; }
+        body #container #contact .contentPanel button {
+          width: calc(100% - 40px);
+          height: 50px;
+          border: none;
+          margin: 0;
+          padding: 0;
+          background: transparent;
+          color: #FFF;
+          margin: 20px;
+          border: 3px solid #ff9933; }
+          body #container #contact .contentPanel button:hover {
+            background: #ff9933;
+            color: #1c1c29;
+            cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

@@ -93,4 +93,9 @@ $(document).ready( function() {
 	});
 });
 
+$(document).ready(function (e) {
+    $('.parallax-window').parallax({imageSrc: 'imgs/contact.jpg'});
+
+});
+
 

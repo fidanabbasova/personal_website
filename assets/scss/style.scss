@@ -520,7 +520,7 @@ body {
 				&:hover {
 					cursor: pointer;
 					background: $orange;
-					color: #FFF;
+					color: rgb(28,28,41);
 				}
 				&:focus {
 					outline: none;
@@ -534,13 +534,86 @@ body {
 				height: 300vh;
 			}
 		}
-		// #blog {
-		// 	top: 500vh;
-		// 	background: navy;
-		// }
-		// #contact {
-		// 	top: 600vh;
-		// 	background: purple;
-		// }
+		#blog {
+			top: 700vh;
+			background: red;
+
+		}
+		#contact {
+			top: 800vh;
+			.titlePanel {
+				// background: #333;
+				// background: linear-gradient(to right, rgba(255,255,255,.95), rgba(28,28,41,.95)); 
+				background: linear-gradient(to right, rgba(255,153,51,.95), rgba(28,28,41,.95)); 
+
+			}
+			.contentPanel {
+				background:rgba(28,28,41,.95); 
+				// background: rgba(0,0,0,.8);
+				text-align: center;
+				ul {
+					list-style-type: none;
+					li {
+						display: inline-block;
+						margin: 10px;
+						a {
+							i {
+								font-size: 50px;
+								color: #FFF;
+							}
+						}
+					}
+				}
+				input {
+					width: calc(100% - 80px);
+					height: 30px;
+					border: none;
+					border-top: 4px solid $orange;
+					margin: 20px;
+					padding: 20px;
+					background: rgba(255,255,255,.2);
+					color: #FFF;
+					&::-webkit-input-placeholder {
+						color: #DDD;
+					}
+				}
+				textarea {
+					width: calc(100% - 80px);
+					border: none;
+					resize: none;
+					padding: 20px;
+					margin: 0;
+					border-top: 4px solid  $orange;
+					margin: 20px;
+					background: rgba(255,255,255,.2);
+					color: #FFF;
+					&::-webkit-input-placeholder {
+						color: #DDD;
+					}
+					// outline: none;
+					// box-shadow: none;
+				}
+				button {
+					width: calc(100% - 40px);
+					height: 50px;
+					border: none;
+					margin: 0;
+					padding: 0;
+					background: transparent;
+					color: #FFF;
+					margin: 20px;
+					// background: rgba(255,153,51,.1);
+					border: 3px solid $orange;
+					// background: rgba(255,153,51,.55);
+					&:hover {
+						background: $orange;
+						color: rgb(28,28,41);
+						cursor: pointer;
+					}
+
+				}
+
+			}
+		}
 	}
 }
