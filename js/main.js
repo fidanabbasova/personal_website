@@ -19,14 +19,8 @@ var viewportwidth;
     viewportheight = document.getElementsByTagName('body')[0].clientHeight;
     viewportwidth = window.getElementsByTagName('body')[0].clientWidth;
  }
-
-// tableTop = (viewportheight - 548) / 2;
-// tableTop += "px";
-
 navCircleTop = (viewportheight - 162) / 2;
 navCircleTop += "px";
-// document.getElementsByClassName("sections").css("height", 200);
-
 
 function loadFunction() {
  	document.getElementById("loader").style.display = "none";
@@ -100,22 +94,6 @@ $(document).ready( function() {
 	navLightboxT += "px";
 	$('#nav-lightbox').css('paddingTop', navLightboxT);
 	$('#nav-lightbox').css('paddingBottom', navLightboxT);
-	
-
-	// var formH = $('#contact .contentPanel div').innerHeight();
-	// console.log(formH);
-
-
-
-	// var aboutH = $('#about .contentPanel').innerHeight();
-	// console.log(aboutH);
-	// var aboutT = (viewportheight - aboutH) / 2;
-	// aboutT += "px";
-	// console.log(aboutT);
-	// $('#about .contentPanel div').css('paddingTop', aboutT);
-	// $('#about .contentPanel div').css('paddingBottom', aboutT);
-
-	// $('table').css('top', tableTop);
 	$('#nav-button button').animate({opacity: '1', right: '0'});
 	$('#nav-circle ul').animate({opacity: '1', top: navCircleTop});
 	$('.hidden').fadeIn("slow");
