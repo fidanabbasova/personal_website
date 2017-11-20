@@ -232,6 +232,41 @@ body {
 		position: relative;
 		top: 0;
 		left: 0;
+		.panel {
+				width: 50%;
+			min-height: 100vh;
+			float: left;
+		}
+		.titlePanel {
+			text-align: center; 
+			h2 {
+				margin: 0;
+				line-height: 100vh;
+				font-size: 5.5vw;
+				font-weight: lighter;
+				color: #FFF;
+				font-family: 'Raleway', sans-serif;
+			}
+		}
+		@media screen and (max-width: 576px) {
+			.panel {
+				width: 100%;
+				float: none;
+			}
+			.titlePanel {
+				min-height: 120px;
+				h2 {
+					text-align: left;
+					line-height: 120px;
+					padding-left: 20px;
+					font-size: 9vw;
+
+				}
+			}
+			.contentPanel {
+				min-height: calc(100vh - 120px);
+			}
+		}
 		.sections {
 			display: block;
 			padding: 0;
@@ -239,45 +274,10 @@ body {
 			z-index: 50;
 			width: 100%;
 			min-height: 100vh;
-			.panel {
-				width: 50%;
-				min-height: 100vh;
-				float: left;
-			}
-			.titlePanel {
-				text-align: center; 
-				h2 {
-					margin: 0;
-					line-height: 100vh;
-					font-size: 5.5vw;
-					font-weight: lighter;
-					color: #FFF;
-					font-family: 'Raleway', sans-serif;
-				}
-			}
-			@media screen and (max-width: 576px) {
-				.panel {
-					width: 100%;
-					float: none;
-				}
-				.titlePanel {
-					min-height: 120px;
-					h2 {
-						text-align: left;
-						line-height: 120px;
-						padding-left: 20px;
-						font-size: 9vw;
-
-					}
-				}
-				.contentPanel {
-					min-height: calc(100vh - 120px);
-				}
-			}
 		}
 		#home{
 			text-align: center;
-			background: rgba(28,28,41,.85);
+			background: radial-gradient(rgba(28,28,41,.95), rgba(28,28,41,.9));
 			h1 {
 				margin: 0;
 				line-height: 100vh;
@@ -451,247 +451,273 @@ body {
 			}
 			#particles-js {
 				width: 100%;
-				height: calc(200vh + 100px) ;
-				background: linear-gradient(to right, rgba(28,28,41,.8), rgb(28,28,41), rgba(28,28,41,.8));
-				// background: linear-gradient(to right, rgba(51,51,51,.8), rgb(51,51,51), rgba(51,51,51,.8));
+				height: 660vh;
+				background: rgba(28,28,41,.8);
 			}
 
 		}
-		#resume {
-			top: 300vh;
-			.sidePanel {
-				width: calc( 50% - 40px );
-				min-height: 100vh;
-				float: left;
-				div {
-					p {
-						color: #FFF;
-						margin: 0;
-						line-height: 30px;
-						font-family: "Open Sans", sans-serif;
-						&:first-child {
-							color: $orange;
-
-						}
-						&:last-child {
-							font-weight: bold;
-						}
-					}
-				}
-			}
-			.leftPanel {
-				text-align: right;
-				padding-right: 40px;
-				.mb {
-					margin-top: 50px;
-				}
-				.aca {
-					margin-top: 150px;
-				}
-			}
-			.rightPanel {
-				text-align: left;
-				padding-left: 40px;
-				.sinam{
-					margin-top: 170px;
-				}
-				.apa {
-					margin-top: 150px;
-				}
-			}
-			.centerPanel {
-				position: absolute;
-				top: 65px;
-				left: 50%;
-				right: 50%;
-				width: 1px;
-				height: 490px;
-				background: #FFF;
-			}
-			.center-circle {
-				position: absolute;
-				right: calc(50% - 15px);
-				left: calc(50% - 15px);
-				z-index: 1000;
-				width: 30px; 
-				height: 30px;
-				border-radius: 50%;
-				background: #FFF;
-				i {
-					position: absolute;
-					color: rgb(28,28,41);
-					top: 7px;
-					left: 7px;
-
-				}
-			}
-			#mb-circle {
-				top: 50px;
-				
-			}
-			#sinam-circle {
-				top: 170px;
-			}
-			#aca-circle {
-				top: 290px;
-				i {
-					left: 6px;
-				}
-			}
-			#apa-circle {
-				top: 410px;
-				i {
-					left: 6px;
-				}
-			}
-			button {
-				top: 555px;
-				position: absolute;
-				right: calc(50% - 100px);
-				left: calc(50% - 100px);
-				z-index: 1000;
-				width: 200px;
-				height: 60px;
-				line-height: 56px; 
-				background: transparent;
-				border: 3px solid $orange;
-				color: $orange;
-				font-family: "Open Sans", sans-serif;
-				@include transition(all, .3s, ease-out);
-
-				&:hover {
-					cursor: pointer;
-					background: $orange;
-					color: rgb(28,28,41);
-				}
-				&:focus {
-					outline: none;
-				}
-			}
-			@media screen and (max-width: 426px) {
-				.sidePanel {
-					font-size: 3.5vw;
-				}
-			}
-		}
-		#portfolio {
-			top: 420vh;
-			text-align: center;
-			img {
-				height: 300vh;
-				// width: 80vw;
-				box-shadow: 0 0 50px rgba(0,0,0,.4);
-			}
-		}
-		#contact {
-			top: 700vh;
-			.titlePanel {
-				// background: #333;
-				// background: linear-gradient(to right, rgba(255,255,255,.95), rgba(28,28,41,.95)); 
-				background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
-
-			}
-			.contentPanel {
-				background:rgba(28,28,41,1); 
-				// background: rgba(0,0,0,.8);
-				text-align: center;
-				form {
-					input {
-						width: calc(100% - 80px);
-						height: 30px;
-						border: none;
-						border-top: 4px solid $orange;
-						margin: 20px;
-						padding: 20px;
-						background: rgba(255,255,255,.2);
-						color: #FFF;
-						&::-webkit-input-placeholder {
-							color: #DDD;
-						}
-					}
-					textarea {
-						width: calc(100% - 80px);
-						border: none;
-						resize: none;
-						padding: 20px;
-						margin: 0;
-						border-top: 4px solid  $orange;
-						margin: 20px;
-						background: rgba(255,255,255,.2);
-						color: #FFF;
-						&::-webkit-input-placeholder {
-							color: #DDD;
-						}
-						// outline: none;
-						// box-shadow: none;
-					}
-					button {
-						width: calc(100% - 40px);
-						height: 50px;
-						border: none;
-						margin: 0;
-						padding: 0;
-						background: transparent;
-						color: #FFF;
-						margin: 20px;
-						// background: rgba(255,153,51,.1);
-						border: 3px solid $orange;
-						// background: rgba(255,153,51,.55);
-						@include transition(all, .3s, ease-out);
-						&:hover {
-							background: $orange;
-							color: rgb(28,28,41);
-							cursor: pointer;
-						}
-
-					}
-				}
-
-			}
-		}
-		footer {
+		.sectionBottom {
 			position: absolute;
-			top: 800vh;
-			left: 0;
 			z-index: 50;
-			display: block;
-			padding: 0;
+			top: 300vh;
 			width: 100%;
-			// height: 50px;
-			// line-height: 50px;
-			text-align: center;
-			background: rgb(28,28,41);
-			ul {
+			height: auto;
+			.sectionsT {
+				display: block;
 				padding: 0;
-				list-style-type: none;
-				li {
-					display: inline-block;
-					margin: 10px 15px;
-					@include transition(all, .3s, ease-out);
-					a {
-						i {
-							font-size: 50px;
-							color: rgba(255,255,255,.7);
+				width: 100%;
+				min-height: 100vh;
+			}
+			#resume {
+				height: 700px;
+				min-height: 0;
+				background: linear-gradient(to right, transparent, rgba(28,28,41,1), transparent); 
+
+				.sidePanel {
+					width: calc( 50% - 40px );
+					// min-height: 100vh;
+					float: left;
+					div {
+						p {
+							color: #FFF;
+							margin: 0;
+							line-height: 30px;
+							font-family: "Open Sans", sans-serif;
+							&:first-child {
+								color: $orange;
+
+							}
+							&:last-child {
+								font-weight: bold;
+							}
 						}
 					}
-					&:hover {
-						@include rotate(360deg);
-						a i {
-							color: #FFF;
-						}
+				}
+				.leftPanel {
+					text-align: right;
+					padding-right: 40px;
+					.mb {
+						margin-top: 50px;
+					}
+					.aca {
+						margin-top: 150px;
+					}
+				}
+				.rightPanel {
+					text-align: left;
+					padding-left: 40px;
+					.sinam{
+						margin-top: 170px;
+					}
+					.apa {
+						margin-top: 150px;
+					}
+				}
+				.centerPanel {
+					position: absolute;
+					top: 65px;
+					left: 50%;
+					right: 50%;
+					width: 1px;
+					height: 490px;
+					background: #FFF;
+				}
+				.center-circle {
+					position: absolute;
+					right: calc(50% - 15px);
+					left: calc(50% - 15px);
+					z-index: 1000;
+					width: 30px; 
+					height: 30px;
+					border-radius: 50%;
+					background: #FFF;
+					i {
+						position: absolute;
+						color: rgb(28,28,41);
+						top: 7px;
+						left: 7px;
 
 					}
-					@media screen and (max-width: 440px) {
-						margin: 10px;	
+				}
+				#mb-circle {
+					top: 50px;
+					
+				}
+				#sinam-circle {
+					top: 170px;
+				}
+				#aca-circle {
+					top: 290px;
+					i {
+						left: 6px;
 					}
-					@media screen and (max-width: 360px) {
-						a i {
-							font-size: 12vw;
-						}	
+				}
+				#apa-circle {
+					top: 410px;
+					i {
+						left: 6px;
+					}
+				}
+				button {
+					top: 555px;
+					position: absolute;
+					right: calc(50% - 100px);
+					left: calc(50% - 100px);
+					z-index: 1000;
+					width: 200px;
+					height: 60px;
+					line-height: 56px; 
+					background: transparent;
+					border: 3px solid $orange;
+					color: $orange;
+					font-family: "Open Sans", sans-serif;
+					@include transition(all, .3s, ease-out);
+
+					&:hover {
+						cursor: pointer;
+						background: $orange;
+						color: rgb(28,28,41);
+					}
+					&:focus {
+						outline: none;
+					}
+				}
+				@media screen and (max-width: 426px) {
+					.sidePanel {
+						font-size: 3.5vw;
 					}
 				}
 			}
-		}
+			#portfolio {
+				text-align: center;
+				img {
+					width: 80vw;
+					box-shadow: 0 0 50px rgba(0,0,0,.4);
+				}
+			}
+			#contact {
+				margin-top: 50px;
+				min-height: auto;
+				height: auto;
+				// background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
+				.panel {
+					min-height: auto;
+					height: auto;
+				}
+				.titlePanel {
+					background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
 
+					// background: #333;
+					// background: linear-gradient(to right, rgba(255,255,255,.95), rgba(28,28,41,.95)); 
+					// background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
+					h2 {
+						line-height: 693px;
+						@media screen and (max-width: 576px) {
+							line-height: 120px;
+						}
+					}
+				}
+				.contentPanel {
+					background:rgba(28,28,41,1); 
+					// background: rgba(0,0,0,.8);
+					text-align: center;
+					padding: 80px 0 40px;
+
+					form {
+						input {
+							width: calc(100% - 80px);
+							height: 30px;
+							border: none;
+							border-top: 4px solid $orange;
+							margin: 20px;
+							padding: 20px;
+							background: rgba(255,255,255,.2);
+							color: #FFF;
+							&::-webkit-input-placeholder {
+								color: #DDD;
+							}
+						}
+						textarea {
+							width: calc(100% - 80px);
+							border: none;
+							resize: none;
+							padding: 20px;
+							margin: 0;
+							border-top: 4px solid  $orange;
+							margin: 20px;
+							background: rgba(255,255,255,.2);
+							color: #FFF;
+							&::-webkit-input-placeholder {
+								color: #DDD;
+							}
+							// outline: none;
+							// box-shadow: none;
+						}
+						button {
+							width: calc(100% - 40px);
+							height: 50px;
+							border: none;
+							margin: 0;
+							padding: 0;
+							background: transparent;
+							color: #FFF;
+							margin: 20px;
+							// background: rgba(255,153,51,.1);
+							border: 3px solid $orange;
+							// background: rgba(255,153,51,.55);
+							@include transition(all, .3s, ease-out);
+							&:hover {
+								background: $orange;
+								color: rgb(28,28,41);
+								cursor: pointer;
+							}
+
+						}
+					}
+					footer {
+						display: block;
+						padding: 0;
+						width: 100%;
+						margin: 0;
+						// height: 50px;
+						// line-height: 50px;
+						text-align: center;
+						background: rgb(28,28,41);
+						ul {
+							padding: 0;
+							list-style-type: none;
+							li {
+								display: inline-block;
+								margin: 10px 15px;
+								@include transition(all, .3s, ease-out);
+								a {
+									i {
+										font-size: 50px;
+										color: rgba(255,255,255,.7);
+									}
+								}
+								&:hover {
+									@include rotate(360deg);
+									a i {
+										color: #FFF;
+									}
+
+								}
+								@media screen and (max-width: 440px) {
+									margin: 10px;	
+								}
+								@media screen and (max-width: 360px) {
+									a i {
+										font-size: 12vw;
+									}	
+								}
+							}
+						}
+					}
+
+				}
+			}
+
+		}
 	}
 }

@@ -189,6 +189,32 @@ body {
     position: relative;
     top: 0;
     left: 0; }
+    body #container .panel {
+      width: 50%;
+      min-height: 100vh;
+      float: left; }
+    body #container .titlePanel {
+      text-align: center; }
+      body #container .titlePanel h2 {
+        margin: 0;
+        line-height: 100vh;
+        font-size: 5.5vw;
+        font-weight: lighter;
+        color: #FFF;
+        font-family: 'Raleway', sans-serif; }
+    @media screen and (max-width: 576px) {
+      body #container .panel {
+        width: 100%;
+        float: none; }
+      body #container .titlePanel {
+        min-height: 120px; }
+        body #container .titlePanel h2 {
+          text-align: left;
+          line-height: 120px;
+          padding-left: 20px;
+          font-size: 9vw; }
+      body #container .contentPanel {
+        min-height: calc(100vh - 120px); } }
     body #container .sections {
       display: block;
       padding: 0;
@@ -196,35 +222,9 @@ body {
       z-index: 50;
       width: 100%;
       min-height: 100vh; }
-      body #container .sections .panel {
-        width: 50%;
-        min-height: 100vh;
-        float: left; }
-      body #container .sections .titlePanel {
-        text-align: center; }
-        body #container .sections .titlePanel h2 {
-          margin: 0;
-          line-height: 100vh;
-          font-size: 5.5vw;
-          font-weight: lighter;
-          color: #FFF;
-          font-family: 'Raleway', sans-serif; }
-      @media screen and (max-width: 576px) {
-        body #container .sections .panel {
-          width: 100%;
-          float: none; }
-        body #container .sections .titlePanel {
-          min-height: 120px; }
-          body #container .sections .titlePanel h2 {
-            text-align: left;
-            line-height: 120px;
-            padding-left: 20px;
-            font-size: 9vw; }
-        body #container .sections .contentPanel {
-          min-height: calc(100vh - 120px); } }
     body #container #home {
       text-align: center;
-      background: rgba(28, 28, 41, 0.85); }
+      background: radial-gradient(rgba(28, 28, 41, 0.95), rgba(28, 28, 41, 0.9)); }
       body #container #home h1 {
         margin: 0;
         line-height: 100vh;
@@ -352,177 +352,96 @@ body {
           top: 300vh; } }
       body #container #particles #particles-js {
         width: 100%;
-        height: calc(200vh + 100px);
-        background: linear-gradient(to right, rgba(28, 28, 41, 0.8), #1c1c29, rgba(28, 28, 41, 0.8)); }
-    body #container #resume {
-      top: 300vh; }
-      body #container #resume .sidePanel {
-        width: calc( 50% - 40px );
-        min-height: 100vh;
-        float: left; }
-        body #container #resume .sidePanel div p {
-          color: #FFF;
-          margin: 0;
-          line-height: 30px;
-          font-family: "Open Sans", sans-serif; }
-          body #container #resume .sidePanel div p:first-child {
-            color: #ff9933; }
-          body #container #resume .sidePanel div p:last-child {
-            font-weight: bold; }
-      body #container #resume .leftPanel {
-        text-align: right;
-        padding-right: 40px; }
-        body #container #resume .leftPanel .mb {
-          margin-top: 50px; }
-        body #container #resume .leftPanel .aca {
-          margin-top: 150px; }
-      body #container #resume .rightPanel {
-        text-align: left;
-        padding-left: 40px; }
-        body #container #resume .rightPanel .sinam {
-          margin-top: 170px; }
-        body #container #resume .rightPanel .apa {
-          margin-top: 150px; }
-      body #container #resume .centerPanel {
-        position: absolute;
-        top: 65px;
-        left: 50%;
-        right: 50%;
-        width: 1px;
-        height: 490px;
-        background: #FFF; }
-      body #container #resume .center-circle {
-        position: absolute;
-        right: calc(50% - 15px);
-        left: calc(50% - 15px);
-        z-index: 1000;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: #FFF; }
-        body #container #resume .center-circle i {
-          position: absolute;
-          color: #1c1c29;
-          top: 7px;
-          left: 7px; }
-      body #container #resume #mb-circle {
-        top: 50px; }
-      body #container #resume #sinam-circle {
-        top: 170px; }
-      body #container #resume #aca-circle {
-        top: 290px; }
-        body #container #resume #aca-circle i {
-          left: 6px; }
-      body #container #resume #apa-circle {
-        top: 410px; }
-        body #container #resume #apa-circle i {
-          left: 6px; }
-      body #container #resume button {
-        top: 555px;
-        position: absolute;
-        right: calc(50% - 100px);
-        left: calc(50% - 100px);
-        z-index: 1000;
-        width: 200px;
-        height: 60px;
-        line-height: 56px;
-        background: transparent;
-        border: 3px solid #ff9933;
-        color: #ff9933;
-        font-family: "Open Sans", sans-serif;
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-        -webkit-transition-property: all;
-        -webkit-transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease-out;
-        -ms-transition-property: all;
-        -ms-transition-duration: 0.3s;
-        -ms-transition-timing-function: ease-out; }
-        body #container #resume button:hover {
-          cursor: pointer;
-          background: #ff9933;
-          color: #1c1c29; }
-        body #container #resume button:focus {
-          outline: none; }
-      @media screen and (max-width: 426px) {
-        body #container #resume .sidePanel {
-          font-size: 3.5vw; } }
-    body #container #portfolio {
-      top: 420vh;
-      text-align: center; }
-      body #container #portfolio img {
-        height: 300vh;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.4); }
-    body #container #contact {
-      top: 700vh; }
-      body #container #contact .titlePanel {
-        background: linear-gradient(to right, #ff9933, #1c1c29); }
-      body #container #contact .contentPanel {
-        background: #1c1c29;
-        text-align: center; }
-        body #container #contact .contentPanel form input {
-          width: calc(100% - 80px);
-          height: 30px;
-          border: none;
-          border-top: 4px solid #ff9933;
-          margin: 20px;
-          padding: 20px;
-          background: rgba(255, 255, 255, 0.2);
-          color: #FFF; }
-          body #container #contact .contentPanel form input::-webkit-input-placeholder {
-            color: #DDD; }
-        body #container #contact .contentPanel form textarea {
-          width: calc(100% - 80px);
-          border: none;
-          resize: none;
-          padding: 20px;
-          margin: 0;
-          border-top: 4px solid #ff9933;
-          margin: 20px;
-          background: rgba(255, 255, 255, 0.2);
-          color: #FFF; }
-          body #container #contact .contentPanel form textarea::-webkit-input-placeholder {
-            color: #DDD; }
-        body #container #contact .contentPanel form button {
-          width: calc(100% - 40px);
-          height: 50px;
-          border: none;
-          margin: 0;
-          padding: 0;
-          background: transparent;
-          color: #FFF;
-          margin: 20px;
-          border: 3px solid #ff9933;
-          transition-property: all;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-out;
-          -webkit-transition-property: all;
-          -webkit-transition-duration: 0.3s;
-          -webkit-transition-timing-function: ease-out;
-          -ms-transition-property: all;
-          -ms-transition-duration: 0.3s;
-          -ms-transition-timing-function: ease-out; }
-          body #container #contact .contentPanel form button:hover {
-            background: #ff9933;
-            color: #1c1c29;
-            cursor: pointer; }
-    body #container footer {
+        height: 660vh;
+        background: rgba(28, 28, 41, 0.8); }
+    body #container .sectionBottom {
       position: absolute;
-      top: 800vh;
-      left: 0;
       z-index: 50;
-      display: block;
-      padding: 0;
+      top: 300vh;
       width: 100%;
-      text-align: center;
-      background: #1c1c29; }
-      body #container footer ul {
+      height: auto; }
+      body #container .sectionBottom .sectionsT {
+        display: block;
         padding: 0;
-        list-style-type: none; }
-        body #container footer ul li {
-          display: inline-block;
-          margin: 10px 15px;
+        width: 100%;
+        min-height: 100vh; }
+      body #container .sectionBottom #resume {
+        height: 700px;
+        min-height: 0;
+        background: linear-gradient(to right, transparent, #1c1c29, transparent); }
+        body #container .sectionBottom #resume .sidePanel {
+          width: calc( 50% - 40px );
+          float: left; }
+          body #container .sectionBottom #resume .sidePanel div p {
+            color: #FFF;
+            margin: 0;
+            line-height: 30px;
+            font-family: "Open Sans", sans-serif; }
+            body #container .sectionBottom #resume .sidePanel div p:first-child {
+              color: #ff9933; }
+            body #container .sectionBottom #resume .sidePanel div p:last-child {
+              font-weight: bold; }
+        body #container .sectionBottom #resume .leftPanel {
+          text-align: right;
+          padding-right: 40px; }
+          body #container .sectionBottom #resume .leftPanel .mb {
+            margin-top: 50px; }
+          body #container .sectionBottom #resume .leftPanel .aca {
+            margin-top: 150px; }
+        body #container .sectionBottom #resume .rightPanel {
+          text-align: left;
+          padding-left: 40px; }
+          body #container .sectionBottom #resume .rightPanel .sinam {
+            margin-top: 170px; }
+          body #container .sectionBottom #resume .rightPanel .apa {
+            margin-top: 150px; }
+        body #container .sectionBottom #resume .centerPanel {
+          position: absolute;
+          top: 65px;
+          left: 50%;
+          right: 50%;
+          width: 1px;
+          height: 490px;
+          background: #FFF; }
+        body #container .sectionBottom #resume .center-circle {
+          position: absolute;
+          right: calc(50% - 15px);
+          left: calc(50% - 15px);
+          z-index: 1000;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #FFF; }
+          body #container .sectionBottom #resume .center-circle i {
+            position: absolute;
+            color: #1c1c29;
+            top: 7px;
+            left: 7px; }
+        body #container .sectionBottom #resume #mb-circle {
+          top: 50px; }
+        body #container .sectionBottom #resume #sinam-circle {
+          top: 170px; }
+        body #container .sectionBottom #resume #aca-circle {
+          top: 290px; }
+          body #container .sectionBottom #resume #aca-circle i {
+            left: 6px; }
+        body #container .sectionBottom #resume #apa-circle {
+          top: 410px; }
+          body #container .sectionBottom #resume #apa-circle i {
+            left: 6px; }
+        body #container .sectionBottom #resume button {
+          top: 555px;
+          position: absolute;
+          right: calc(50% - 100px);
+          left: calc(50% - 100px);
+          z-index: 1000;
+          width: 200px;
+          height: 60px;
+          line-height: 56px;
+          background: transparent;
+          border: 3px solid #ff9933;
+          color: #ff9933;
+          font-family: "Open Sans", sans-serif;
           transition-property: all;
           transition-duration: 0.3s;
           transition-timing-function: ease-out;
@@ -532,20 +451,120 @@ body {
           -ms-transition-property: all;
           -ms-transition-duration: 0.3s;
           -ms-transition-timing-function: ease-out; }
-          body #container footer ul li a i {
-            font-size: 50px;
-            color: rgba(255, 255, 255, 0.7); }
-          body #container footer ul li:hover {
-            -ms-transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); }
-            body #container footer ul li:hover a i {
-              color: #FFF; }
-          @media screen and (max-width: 440px) {
-            body #container footer ul li {
-              margin: 10px; } }
-          @media screen and (max-width: 360px) {
-            body #container footer ul li a i {
-              font-size: 12vw; } }
+          body #container .sectionBottom #resume button:hover {
+            cursor: pointer;
+            background: #ff9933;
+            color: #1c1c29; }
+          body #container .sectionBottom #resume button:focus {
+            outline: none; }
+        @media screen and (max-width: 426px) {
+          body #container .sectionBottom #resume .sidePanel {
+            font-size: 3.5vw; } }
+      body #container .sectionBottom #portfolio {
+        text-align: center; }
+        body #container .sectionBottom #portfolio img {
+          width: 80vw;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.4); }
+      body #container .sectionBottom #contact {
+        margin-top: 50px;
+        min-height: auto;
+        height: auto; }
+        body #container .sectionBottom #contact .panel {
+          min-height: auto;
+          height: auto; }
+        body #container .sectionBottom #contact .titlePanel {
+          background: linear-gradient(to right, #ff9933, #1c1c29); }
+          body #container .sectionBottom #contact .titlePanel h2 {
+            line-height: 693px; }
+            @media screen and (max-width: 576px) {
+              body #container .sectionBottom #contact .titlePanel h2 {
+                line-height: 120px; } }
+        body #container .sectionBottom #contact .contentPanel {
+          background: #1c1c29;
+          text-align: center;
+          padding: 80px 0 40px; }
+          body #container .sectionBottom #contact .contentPanel form input {
+            width: calc(100% - 80px);
+            height: 30px;
+            border: none;
+            border-top: 4px solid #ff9933;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFF; }
+            body #container .sectionBottom #contact .contentPanel form input::-webkit-input-placeholder {
+              color: #DDD; }
+          body #container .sectionBottom #contact .contentPanel form textarea {
+            width: calc(100% - 80px);
+            border: none;
+            resize: none;
+            padding: 20px;
+            margin: 0;
+            border-top: 4px solid #ff9933;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFF; }
+            body #container .sectionBottom #contact .contentPanel form textarea::-webkit-input-placeholder {
+              color: #DDD; }
+          body #container .sectionBottom #contact .contentPanel form button {
+            width: calc(100% - 40px);
+            height: 50px;
+            border: none;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            color: #FFF;
+            margin: 20px;
+            border: 3px solid #ff9933;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            -ms-transition-property: all;
+            -ms-transition-duration: 0.3s;
+            -ms-transition-timing-function: ease-out; }
+            body #container .sectionBottom #contact .contentPanel form button:hover {
+              background: #ff9933;
+              color: #1c1c29;
+              cursor: pointer; }
+          body #container .sectionBottom #contact .contentPanel footer {
+            display: block;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            background: #1c1c29; }
+            body #container .sectionBottom #contact .contentPanel footer ul {
+              padding: 0;
+              list-style-type: none; }
+              body #container .sectionBottom #contact .contentPanel footer ul li {
+                display: inline-block;
+                margin: 10px 15px;
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+                -webkit-transition-property: all;
+                -webkit-transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-out;
+                -ms-transition-property: all;
+                -ms-transition-duration: 0.3s;
+                -ms-transition-timing-function: ease-out; }
+                body #container .sectionBottom #contact .contentPanel footer ul li a i {
+                  font-size: 50px;
+                  color: rgba(255, 255, 255, 0.7); }
+                body #container .sectionBottom #contact .contentPanel footer ul li:hover {
+                  -ms-transform: rotate(360deg);
+                  -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg); }
+                  body #container .sectionBottom #contact .contentPanel footer ul li:hover a i {
+                    color: #FFF; }
+                @media screen and (max-width: 440px) {
+                  body #container .sectionBottom #contact .contentPanel footer ul li {
+                    margin: 10px; } }
+                @media screen and (max-width: 360px) {
+                  body #container .sectionBottom #contact .contentPanel footer ul li a i {
+                    font-size: 12vw; } }
 
 /*# sourceMappingURL=style.css.map */
