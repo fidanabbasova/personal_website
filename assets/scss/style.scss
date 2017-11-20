@@ -72,9 +72,9 @@ body {
 			.icon-span {
 				display: block;
 				width: 45px;
-				height: 5px;
-				background: #FFF;
-				margin: 10px;
+				height: 3px;
+				background: #CCC;
+				margin: 12px;
 				@include transition(all, .3s, ease-out);
 			}
 			.middle-bar {
@@ -109,7 +109,7 @@ body {
 		display: none;
 		position: fixed;
 		width: 100%;
-		min-height: 100vh;
+		// min-height: 100vh;
 		background: rgba(28,28,41,.95);
 		text-align: center;
 		z-index: 95;
@@ -130,34 +130,9 @@ body {
 				}
 			}
 		}
-		@media screen and (max-width: 960px) and (min-width: 768px) {
-			ul {
-				margin: 200px 0 0;
-			}
-		}
-		@media screen and (max-width: 767px) and (min-width: 576px) {
-			ul {
-				margin-top: 150px;
-			}
-		}
 		@media screen and (max-width: 575px) {
-			ul {
-				li {
-					margin: 15px;
-					a {
-						font-size: 1.5em;
-					}
-				}
-			}
-		}
-		@media screen and (max-width: 575px) and (min-width: 360px) {
-			ul {
-				margin-top: 150px;
-			}
-		}
-		@media screen and (max-width: 360px) {
-			ul {
-				margin-top: 100px;
+			a {
+				font-size: 1.5em;
 			}
 		}
 	}
@@ -179,16 +154,19 @@ body {
 					padding: 5px;
 					border: 2px solid #FFF;
 					border-radius: 50%;
+					box-shadow: 0 0 10px rgb(28,28,60);
 					
 				}
 				div {
 					display: none;
+					width: 100px;
+					text-align: center;
 					position: absolute;
 					top: -15px;
 					left: 35px;
 					background: rgb(28,28,60);
 					color: #FFF;
-					padding: 15px;
+					padding: 15px 0;
 					border-radius: 40px;
 					&:before {
 						content:" ";
@@ -196,18 +174,13 @@ body {
 					    border-width: 10px 15px 10px 0;
 					    border-color: transparent  rgb(28,28,60) transparent transparent;
 					    position: absolute;
-					    left: -13px;
+					    left: -13px;	
 					}
 				}
 				&:first-child {
 					a {
 						margin-top: 0;
 					}
-				}
-				.active {
-					border: none;
-					padding: 7px;
-					background: #FFF;
 				}
 				&:hover {
 					a {
@@ -217,7 +190,20 @@ body {
 					}
 					div {
 						display: block;
+						background: $orange;
+						z-index: 1000;
+						&:before {
+							border-color: transparent $orange transparent transparent;
+						}
 					}
+				}
+				.active {
+					border: none;
+					padding: 7px;
+					background: #FFF;
+				}
+				.active + div {
+					display: block;
 				}
 			}
 		}
@@ -227,6 +213,7 @@ body {
 
 	}
 	header {
+		display: none;
 		position: fixed;
 		z-index: 0;
 		top: 0;
@@ -262,12 +249,30 @@ body {
 				h2 {
 					margin: 0;
 					line-height: 100vh;
-					font-size: 60px;
+					font-size: 5.5vw;
 					font-weight: lighter;
 					color: #FFF;
 					font-family: 'Raleway', sans-serif;
 				}
+			}
+			@media screen and (max-width: 576px) {
+				.panel {
+					width: 100%;
+					float: none;
+				}
+				.titlePanel {
+					min-height: 120px;
+					h2 {
+						text-align: left;
+						line-height: 120px;
+						padding-left: 20px;
+						font-size: 9vw;
 
+					}
+				}
+				.contentPanel {
+					min-height: calc(100vh - 120px);
+				}
 			}
 		}
 		#home{
@@ -306,28 +311,50 @@ body {
 			.contentPanel {
 				background: #FFF;
 				text-align: center;
-				img {
-					margin: 30px;
-					width: 40%;
-					height: auto;
-					border-radius: 50%;
-					// border: 10px dashed $orange;
-					box-shadow: 0 0 10px #333;
-				}
-				p {
-					line-height: 30px;
-					font-size: 24px;
-					margin: 0 100px;
-					text-align: right;
-					font-family: 'Open Sans', sans-serif;
-					font-weight: lighter;
-					strong {
-						color:  rgb(28,28,60);
-
+				display: -webkit-flex;
+    			-webkit-align-items: center;
+				display: flex;
+			    align-items: center;
+				.container-about{
+					img {
+						margin: 0 30px 30px;
+						width: 40%;
+						border-radius: 50%;
+						box-shadow: 0 0 10px rgba(0,0,0,.4);
 					}
-					i {
-						color: rgb(28,28,60);
+					p {
+						line-height: 2.5vw;
+						font-size: 2vw;
+						margin: 0 50px;
+						text-align: right;
+						font-family: 'Open Sans', sans-serif;
+						font-weight: lighter;
+						strong {
+							color:  rgb(28,28,60);
 
+						}
+						i {
+							color: rgb(28,28,60);
+
+						}
+						@media screen and (max-width: 968px) {
+							margin: 0 50px;
+						}
+					}
+				}
+			}
+			@media screen and (max-width: 576px) {
+				.contentPanel {
+					.container-about{
+						img {
+							margin: 0 20px 20px;
+							width: 60%;
+						}
+						p {
+							line-height: 4.5vw;
+							font-size: 4vw;
+							text-align: center;
+						}
 					}
 				}
 			}			
@@ -337,27 +364,32 @@ body {
 			top: 200vh;
 			.titlePanel {
 				background: rgb(28,28,41);
+				float: right;
 			}
 			.contentPanel {
-				position: relative;
+				position: absolute;
 				background: #FFF;
+				display: -webkit-flex;
+    			-webkit-align-items: center;
+				display: flex;
+			    align-items: center;
 				table {
-					position: absolute;
 					width: 100%;
 					color: #333;
+					padding: 0 1vw;
 					tr {
-						height: 40px;
+						height: 3vw;
 						.title {
 							width: 20%;
 							text-align: right;
 							font-weight: bold;
-							padding-right: 15px;
+							padding-right: 1vw;
 
 						}
 						.level {
 							width: 70%;
 							div {
-								height: 25px;
+								height: 2vw;
 								background: $orange;
 							}
 						}
@@ -406,12 +438,20 @@ body {
 					}
 				}
 			}
+			@media screen and (max-width: 576px) {
+				.contentPanel {margin-top: 120px;
+					height: auto;
+				}
+			}
 		}
 		#particles {
 			top: 300vh;
+			@media screen and (max-width: 576px) {
+				top: 300vh;
+			}
 			#particles-js {
 				width: 100%;
-				height: 400vh;
+				height: calc(200vh + 100px) ;
 				background: linear-gradient(to right, rgba(28,28,41,.8), rgb(28,28,41), rgba(28,28,41,.8));
 				// background: linear-gradient(to right, rgba(51,51,51,.8), rgb(51,51,51), rgba(51,51,51,.8));
 			}
@@ -421,7 +461,7 @@ body {
 			top: 300vh;
 			.sidePanel {
 				width: calc( 50% - 40px );
-				height: 100vh;
+				min-height: 100vh;
 				float: left;
 				div {
 					p {
@@ -517,6 +557,8 @@ body {
 				border: 3px solid $orange;
 				color: $orange;
 				font-family: "Open Sans", sans-serif;
+				@include transition(all, .3s, ease-out);
+
 				&:hover {
 					cursor: pointer;
 					background: $orange;
@@ -526,94 +568,130 @@ body {
 					outline: none;
 				}
 			}
+			@media screen and (max-width: 426px) {
+				.sidePanel {
+					font-size: 3.5vw;
+				}
+			}
 		}
 		#portfolio {
-			top: 400vh;
+			top: 420vh;
 			text-align: center;
 			img {
 				height: 300vh;
+				// width: 80vw;
+				box-shadow: 0 0 50px rgba(0,0,0,.4);
 			}
 		}
-		#blog {
-			top: 700vh;
-			background: red;
-
-		}
 		#contact {
-			top: 800vh;
+			top: 700vh;
 			.titlePanel {
 				// background: #333;
 				// background: linear-gradient(to right, rgba(255,255,255,.95), rgba(28,28,41,.95)); 
-				background: linear-gradient(to right, rgba(255,153,51,.95), rgba(28,28,41,.95)); 
+				background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
 
 			}
 			.contentPanel {
-				background:rgba(28,28,41,.95); 
+				background:rgba(28,28,41,1); 
 				// background: rgba(0,0,0,.8);
 				text-align: center;
-				ul {
-					list-style-type: none;
-					li {
-						display: inline-block;
-						margin: 10px;
-						a {
-							i {
-								font-size: 50px;
-								color: #FFF;
-							}
+				form {
+					input {
+						width: calc(100% - 80px);
+						height: 30px;
+						border: none;
+						border-top: 4px solid $orange;
+						margin: 20px;
+						padding: 20px;
+						background: rgba(255,255,255,.2);
+						color: #FFF;
+						&::-webkit-input-placeholder {
+							color: #DDD;
 						}
 					}
-				}
-				input {
-					width: calc(100% - 80px);
-					height: 30px;
-					border: none;
-					border-top: 4px solid $orange;
-					margin: 20px;
-					padding: 20px;
-					background: rgba(255,255,255,.2);
-					color: #FFF;
-					&::-webkit-input-placeholder {
-						color: #DDD;
+					textarea {
+						width: calc(100% - 80px);
+						border: none;
+						resize: none;
+						padding: 20px;
+						margin: 0;
+						border-top: 4px solid  $orange;
+						margin: 20px;
+						background: rgba(255,255,255,.2);
+						color: #FFF;
+						&::-webkit-input-placeholder {
+							color: #DDD;
+						}
+						// outline: none;
+						// box-shadow: none;
 					}
-				}
-				textarea {
-					width: calc(100% - 80px);
-					border: none;
-					resize: none;
-					padding: 20px;
-					margin: 0;
-					border-top: 4px solid  $orange;
-					margin: 20px;
-					background: rgba(255,255,255,.2);
-					color: #FFF;
-					&::-webkit-input-placeholder {
-						color: #DDD;
-					}
-					// outline: none;
-					// box-shadow: none;
-				}
-				button {
-					width: calc(100% - 40px);
-					height: 50px;
-					border: none;
-					margin: 0;
-					padding: 0;
-					background: transparent;
-					color: #FFF;
-					margin: 20px;
-					// background: rgba(255,153,51,.1);
-					border: 3px solid $orange;
-					// background: rgba(255,153,51,.55);
-					&:hover {
-						background: $orange;
-						color: rgb(28,28,41);
-						cursor: pointer;
-					}
+					button {
+						width: calc(100% - 40px);
+						height: 50px;
+						border: none;
+						margin: 0;
+						padding: 0;
+						background: transparent;
+						color: #FFF;
+						margin: 20px;
+						// background: rgba(255,153,51,.1);
+						border: 3px solid $orange;
+						// background: rgba(255,153,51,.55);
+						@include transition(all, .3s, ease-out);
+						&:hover {
+							background: $orange;
+							color: rgb(28,28,41);
+							cursor: pointer;
+						}
 
+					}
 				}
 
 			}
 		}
+		footer {
+			position: absolute;
+			top: 800vh;
+			left: 0;
+			z-index: 50;
+			display: block;
+			padding: 0;
+			width: 100%;
+			// height: 50px;
+			// line-height: 50px;
+			text-align: center;
+			background: rgb(28,28,41);
+			ul {
+				padding: 0;
+				list-style-type: none;
+				li {
+					display: inline-block;
+					margin: 10px 15px;
+					@include transition(all, .3s, ease-out);
+					a {
+						i {
+							font-size: 50px;
+							color: rgba(255,255,255,.7);
+						}
+					}
+					&:hover {
+						@include rotate(360deg);
+						a i {
+							color: #FFF;
+						}
+
+					}
+					@media screen and (max-width: 440px) {
+						margin: 10px;	
+					}
+					@media screen and (max-width: 360px) {
+						a i {
+							font-size: 12vw;
+						}	
+					}
+				}
+			}
+		}
+
 	}
 }
