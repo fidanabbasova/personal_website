@@ -40,8 +40,7 @@ body {
       position: relative;
       right: 200px;
       background: transparent;
-      border: none;
-      opacity: 0; }
+      border: none; }
       body #nav-button button .icon-span {
         display: block;
         width: 45px;
@@ -460,7 +459,7 @@ body {
     body #container #contact {
       top: calc(440vh + 1000px); }
       body #container #contact .titlePanel {
-        background: linear-gradient(to right, #ff9933, #1c1c29); }
+        background: #ff9933; }
       body #container #contact .contentPanel {
         background: #1c1c29;
         text-align: center;
@@ -476,6 +475,9 @@ body {
           color: #FFF; }
           body #container #contact .contentPanel form input::-webkit-input-placeholder {
             color: #DDD; }
+          body #container #contact .contentPanel form input:focus {
+            outline: none;
+            box-shadow: 0 0 10px black; }
         body #container #contact .contentPanel form textarea {
           width: calc(100% - 80px);
           border: none;
@@ -488,6 +490,9 @@ body {
           color: #FFF; }
           body #container #contact .contentPanel form textarea::-webkit-input-placeholder {
             color: #DDD; }
+          body #container #contact .contentPanel form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 10px black; }
         body #container #contact .contentPanel form button {
           width: calc(100% - 40px);
           height: 50px;
@@ -520,7 +525,7 @@ body {
       padding: 0;
       width: 100%;
       text-align: center;
-      background: #1c1c29; }
+      background: #333; }
       body #container footer ul {
         padding: 0;
         list-style-type: none; }
@@ -538,7 +543,7 @@ body {
           -ms-transition-timing-function: ease-out; }
           body #container footer ul li a i {
             font-size: 50px;
-            color: rgba(255, 255, 255, 0.7); }
+            color: rgba(255, 255, 255, 0.9); }
           body #container footer ul li:hover {
             -ms-transform: rotate(360deg);
             -webkit-transform: rotate(360deg);
@@ -551,8 +556,5 @@ body {
           @media screen and (max-width: 360px) {
             body #container footer ul li a i {
               font-size: 12vw; } }
-    @media screen and (max-width: 576px) {
-      body #container {
-        top: calc(540vh + 1600px); } }
 
 /*# sourceMappingURL=style.css.map */

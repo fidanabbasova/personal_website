@@ -97,8 +97,8 @@ $(document).ready( function() {
 	$('#nav-button button').animate({opacity: '1', right: '0'});
 	$('#nav-circle ul').animate({opacity: '1', top: navCircleTop});
 	$('.hidden').fadeIn("slow");
-	$('#nav-button button').on('click touchstart', function() {
-	// $('#nav-button button').click( function() {
+	// $('#nav-button button').on('click touchstart', function() {
+	$('#nav-button button').click( function() {
 		$(this).toggleClass('active');
 		$('#nav-lightbox').fadeToggle();
 		// $('#container').fadeToggle();

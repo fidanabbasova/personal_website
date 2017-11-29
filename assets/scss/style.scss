@@ -68,7 +68,7 @@ body {
 			right: 200px;
 			background: transparent;
 			border: none;
-			opacity: 0;  
+			// opacity: 0;  
 			.icon-span {
 				display: block;
 				width: 45px;
@@ -587,7 +587,7 @@ body {
 		#contact {
 			top: calc(440vh + 1000px);
 			.titlePanel {
-				background: linear-gradient(to right, rgba(255,153,51,1), rgba(28,28,41,1)); 
+				background: rgba(255,153,51,1); 
 
 			}
 			.contentPanel {
@@ -607,6 +607,10 @@ body {
 						&::-webkit-input-placeholder {
 							color: #DDD;
 						}
+						&:focus {
+							outline: none;
+							box-shadow: 0 0 10px black;
+						}
 					}
 					textarea {
 						width: calc(100% - 80px);
@@ -620,6 +624,10 @@ body {
 						color: #FFF;
 						&::-webkit-input-placeholder {
 							color: #DDD;
+						}
+						&:focus {
+							outline: none;
+							box-shadow: 0 0 10px black;
 						}
 					}
 					button {
@@ -655,7 +663,7 @@ body {
 			// height: 50px;
 			// line-height: 50px;
 			text-align: center;
-			background: rgb(28,28,41);
+			background: #333;
 			ul {
 				padding: 0;
 				list-style-type: none;
@@ -666,7 +674,7 @@ body {
 					a {
 						i {
 							font-size: 50px;
-							color: rgba(255,255,255,.7);
+							color: rgba(255,255,255,.9);
 						}
 					}
 					&:hover {
@@ -687,10 +695,5 @@ body {
 				}
 			}
 		}
-		@media screen and (max-width: 576px) {
-			top: calc(540vh + 1600px);
-
-		}
-
 	}
 }
